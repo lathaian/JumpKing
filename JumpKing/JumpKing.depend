@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1747492332 source:d:\it project\jumpguy\jumpking\jumpking\main.cpp
+	<iostream>
+	<string>
+	"Headers/header.h"
+	<stdio.h>
+	"Headers/game.h"
+	"Headers/texture.h"
+
+1747562899 source:d:\it project\jumpguy\jumpking\jumpking\game.cpp
+	"Headers/game.h"
+	"Headers/texture.h"
+	"Headers/gameObject.h"
+	"Headers/map.h"
+	"Headers/textObj.h"
+
+1747486851 d:\it project\jumpguy\jumpking\jumpking\headers\game.h
+	"Header.h"
+	<iostream>
+	"textObj.h"
+	<fstream>
+
+1747327792 d:\it project\jumpguy\jumpking\jumpking\headers\header.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1747385849 source:d:\it project\jumpguy\jumpking\jumpking\texture.cpp
+	"Headers/texture.h"
+
+1747384893 d:\it project\jumpguy\jumpking\jumpking\headers\texture.h
+	"Header.h"
+	"Game.h"
+
+1747480332 d:\it project\jumpguy\jumpking\jumpking\headers\textobj.h
+	"game.h"
+	<string>
+	<stdio.h>
+	<SDL_ttf.h>
+
+1747639672 d:\it project\jumpguy\jumpking\jumpking\headers\gameobject.h
+	"Game.h"
+	"header.h"
+	<math.h>
+
+1747639221 d:\it project\jumpguy\jumpking\jumpking\headers\map.h
+	"Header.h"
+	"Game.h"
+	"GameObject.h"
+
+1747474298 source:d:\it project\jumpguy\jumpking\jumpking\textobj.cpp
+	"Headers/textObj.h"
+
+1747639362 source:d:\it project\jumpguy\jumpking\jumpking\map.cpp
+	"Headers/map.h"
+	"Headers/texture.h"
+	"Headers/game.h"
+	"Headers/gameObject.h"
+
+1747639351 source:d:\it project\jumpguy\jumpking\jumpking\gameobject.cpp
+	"Headers/game.h"
+	"Headers/gameObject.h"
+	"Headers/texture.h"
+	"Headers/map.h"
+
