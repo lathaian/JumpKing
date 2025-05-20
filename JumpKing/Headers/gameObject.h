@@ -70,6 +70,8 @@ public:
     // get the collider
     SDL_Rect GetCollider() { return collider; }
 
+    // update function
+    void Update(SDL_Rect Tile[][60], int Mapping[][60]);
 
     // run function
     void RunLeft();
