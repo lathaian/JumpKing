@@ -5,6 +5,7 @@
 #include "Game.h"
 #include "header.h"
 #include <math.h>
+#include "time.h"
 
 #define gravity 0.8
 #define MAX_FALL_SPEED 20

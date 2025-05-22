@@ -32,7 +32,7 @@ public:
     bool checkCollision(SDL_Rect a, SDL_Rect b);
 
     // friend function
-    //friend void GameObject::Update(SDL_Rect Tile[][60], int Mapping[][60]);
+    friend void GameObject::Update(SDL_Rect Tile[][60], int Mapping[][60]);
     friend bool Collide(SDL_Rect Tile[], int Mapping[][60]);
     friend void Game::update();
 };

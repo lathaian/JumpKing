@@ -62,8 +62,8 @@ void GameObject::SetClips(){
 // constructor
 GameObject::GameObject(int x, int y){
     //load texture
-    objTextureRight = texture::LoadTexture("king_right_2.png");
-    objTextureLeft = texture::LoadTexture("king_left_2.png");
+    objTextureRight = texture::LoadTexture("image/king_right_2.png");
+    objTextureLeft = texture::LoadTexture("image/king_left_2.png");
 
     High = Mix_LoadWAV("sound/high.wav");
 
@@ -97,6 +97,11 @@ GameObject::GameObject(int x, int y){
     srcRect.w = KING_WIDTH;
     srcRect.x = 4;
     srcRect.y = 9;
+
+    destRect.h = srcRect.h;
+    destRect.w = srcRect.w;
+    destRect.x = (int)xpos;
+    destRect.y = (int)ypos;
 
     collider.h = KING_HEIGHT;
     collider.w = KING_WIDTH;

@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
-#include "Headers/header.h"
+#include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_mixer.h>
+#include <SDL_ttf.h>
 #include <stdio.h>
 #include "Headers/game.h"
 #include "Headers/texture.h"
@@ -21,20 +24,27 @@ int main(int argc, char* args[]) {
     game->init("JumpKing", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, false);
 
     // main game loop
-    while (game->running()) {
-        frameStart = SDL_GetTicks();
+    while (game->running() == true)
+    {
+        if (game->winning() == false && game->retrying() == true)
+        {
+            frameStart = SDL_GetTicks();
 
-        game->handleEvents();
-        game->update();
-        game->render();
+            game->handleEvents();
+            game->update();
+            game->render();
 
-        frameTime = SDL_GetTicks() - frameStart;
+            frameTime = SDL_GetTicks() - frameStart;
 
-        // delay to maintain consistent frame rate
-        if (frameDelay > frameTime) {
-            SDL_Delay(frameDelay - frameTime);
+            if (frameDelay > frameTime)
+            {
+                SDL_Delay(frameDelay - frameTime);
+            }
+        }
+        else
+        {
+            game->retry();
         }
     }
     game->clean();
-    return 0;
 }
